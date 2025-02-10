@@ -3,10 +3,6 @@
 ## Descrição
 Este projeto tem como objetivo converter dados armazenados em um ficheiro JSON (`emd.json`) para o formato RDF utilizando a biblioteca **RDFlib** em Python. O script lê os dados do JSON, estrutura-os como um grafo RDF e salva o resultado em um ficheiro **Turtle (`result.ttl`)**.
 
-## Tecnologias Utilizadas
-- **Python 3**
-- **RDFlib** (para manipulação do grafo RDF)
-- **JSON** (para leitura dos dados)
 
 ## Estrutura do Código
 O script segue as seguintes etapas:
