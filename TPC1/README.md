@@ -57,12 +57,3 @@ ex:Pessoa/60b3ee0e4a1e0233af16ac8c a ex:Pessoa ;
     ex:pratica ex:Modalidade/Badminton ;
     ex:fezExame ex:Exame/60b3ee0e4a1e0233af16ac8c .
 ```
-
-## Notas
-- Certifique-se de que o ficheiro `emd.json` está corretamente formatado.
-- Se houver problemas com caracteres especiais, certifique-se de que o ficheiro JSON está em **UTF-8**.
-- O script pode ser expandido para suportar mais propriedades e relações.
-
----
-**Autor:** gonca | **Ano:** 2025
-
