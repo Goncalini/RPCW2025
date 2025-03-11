@@ -61,6 +61,7 @@ SELECT ?nome ?data ?cognome WHERE {
   ?s :nascimento ?data .
   ?s :cognomes ?cognome .
 }
+
 ```
 **Explicação:**
 A consulta recupera informações detalhadas sobre os reis registrados na ontologia. Os padrões `?s :nome ?nome`, `?s :nascimento ?data` e `?s :cognomes ?cognome` filtram os atributos desejados.
@@ -93,8 +94,18 @@ SELECT ?dinastia (COUNT (DISTINCT ?monarca) as ?d) WHERE {
   ?monarca a :Rei .
 } GROUP BY ?dinastia ORDER BY ?dinastia
 ```
+
 **Explicação:**
 Esta consulta agrupa os reis por dinastia e conta quantos reis pertencem a cada uma. O uso de `GROUP BY ?dinastia` e `COUNT(DISTINCT ?monarca)` garante que a contagem seja feita corretamente.
+
+ou
+```sparql
+SELECT ?dinastia (count(distinct ?monarca) as ?d)WHERE {
+  ?monarca a Rei .
+  ?monarca :temReinado/:dinastia ?dinastia .
+
+} group by ?dinastia order by ?dinastia
+```
 
 ---
 
@@ -107,6 +118,7 @@ SELECT ?descobrimento ?descricao WHERE {
   ?descobrimento :notas ?descricao .
 } ORDER BY ?data
 ```
+
 **Explicação:**
 A consulta recupera os descobrimentos registrados, suas descrições e ordena os resultados pela data do evento.
 
