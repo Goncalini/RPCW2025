@@ -1,0 +1,40 @@
+1)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT(COUNT(DISTINCT ?c) AS ?ClassesCount)
+WHERE{
+    ?c a owl:Class .
+}
+
+2)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (COUNT(DISTINCT ?obj) AS ?objProp)
+WHERE{
+        ?obj a owl:ObjectProperty
+}
+
+3)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (COUNT(DISTINCT ?ind) AS ?CountInd)
+WHERE{
+        ?ind a owl:NamedIndividual
+}
+
+4)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/gonca/ontologies/2025/historia/> 
+
+SELECT ?ind
+WHERE{
+    ?ind :Cultiva :Tomate
+    
+}
+
+5)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/gonca/ontologies/2025/historia/> 
+
+SELECT ?ind
+WHERE{
+    ?ind :Contrata ?trabalhador
+    
+}
